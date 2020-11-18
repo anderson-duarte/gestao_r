@@ -14,7 +14,9 @@ Seja Bem Vindo!
             <h3 class="title text-info">Funcionários</h3>
             <a href="{% url 'funcionarios:funcionarios_list' %}">Lista de Funcionários</a>
             <h3 class="title text-info">Departamentos</h3>
-            <a href="{% url 'departamento:list_departamento' %}">Lista de departamentos</a>
+            <a href="{% url 'departamento:list_departamento' %}">Lista de Departamentos</a>
+            <h3 class="title text-info">Horas Extras</h3>
+            <a href="{% url 'horas_extras:horas_extras-lista' %}">Lista de Horas Extras</a>
             {% else %}
             <a href="{% url 'empresas:criar_empresa' %}">Criar Empresa</a>
             {% endif %}

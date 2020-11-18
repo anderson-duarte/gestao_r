@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('funcionarios/', include('apps.funcionarios.urls', namespace='funcionarios')),
     path('funcionarios/documentos/', include('apps.documentos.urls', namespace='documentos')),
+    path('funcionarios/horas_extras/', include('apps.registro_hora_extra.urls', namespace='horas_extras')),
     path('departamentos/', include('apps.departamentos.urls', namespace='departamento')),
     path('empresa/', include('apps.empresas.urls', namespace='empresas')),
     path('', include('apps.core.urls', namespace='coracao')),

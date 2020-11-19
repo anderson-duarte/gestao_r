@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     usuario = request.user
     contexto = {'usuario':usuario}
-    return render(request, 'core/index.html', contexto)
+    return render(request, 'core/home.html', contexto)
 
 
 def sair(request):

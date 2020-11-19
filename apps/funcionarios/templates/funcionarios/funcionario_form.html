@@ -11,14 +11,11 @@
         <button type="submit" class="btn btn-block btn-success">Salvar</button>
         </form>
         </div>
-    </div>
-
-    <hr>
+    </div><br>
     <div class="row">
         <div class="col-md-4">
-            <a href="{% url 'documentos:documentocreate' %}" class="btn btn-block btn-info">Adicionar documento</a>
+            <a href="{% url 'documentos:documentocreate' %}" class="btn btn-block btn-info">Adicionar documento</a><br>
             <a href="{% url 'documentos:documentolist' %}" class="btn btn-block btn-danger">Listar documento</a>
         </div>
     </div>
-
 {% endblock %}

@@ -3,7 +3,7 @@
 {% block main%}
 <h3 class="text-info title">Lista de Funcionários</h3>
 <hr>
-<a href="{% url 'funcionarios:funcionarios_novo' %}" class="btn btn-success">Novo Funcionario</a>
+<a href="{% url 'horas_extras:horas_extras-add' %}" class="btn btn-success">Registrar Hora Extra</a>
 <hr>
   <table class="table">
     <thead class="thead-dark">
@@ -23,9 +23,9 @@
         <td>{{hora}}</td>
         <td>{{hora.funcionario}}</td>
         <td>{{hora.hora_extra}}</td>
-        <td><a href="#"
+        <td><a href="{% url 'horas_extras:horas_extras_edit' hora.pk %}"
         class="btn btn-info">Editar</a></td>
-        <td><a href="#"
+        <td><a href="{% url 'horas_extras:horas_extras_delete' hora.pk %}"
         class="btn btn-danger">Deletar</a></td>
       </tr>
       {% endfor %}

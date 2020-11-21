@@ -10,14 +10,8 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 class HorasExtrasList(ListView):
     model = RegistroHoraExtra
 
-    def get_queryset(self):
-        empresa = self.request.user.funcionario.empresa
-        funcionarios = Funcionario.objects.filter(empresa=empresa)
-        return funcionarios
-
-
     def get_form_kwargs(self):
-        kwargs = super(HorasExtrasCreate, self).get_form_kwargs()
+        kwargs = super(HorasExtrasList, self).get_form_kwargs()
         kwargs.update({'user': self.request.user})
         return kwargs
 
